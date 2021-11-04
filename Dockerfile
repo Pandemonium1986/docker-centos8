@@ -25,6 +25,11 @@ RUN dnf -y install epel-release && \
       python3-pip && \
     dnf clean all
 
+ENV LC_ALL en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.UTF-8
+ENV PYTHONIOENCODING utf8
+
 VOLUME ["/sys/fs/cgroup"]
 
 CMD ["/lib/systemd/systemd"]
