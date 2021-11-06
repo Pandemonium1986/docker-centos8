@@ -21,6 +21,7 @@ WORKDIR /
 # Install dependencies.
 RUN dnf -y install epel-release && \
     dnf -y install \
+      glibc-langpack-en \
       openssh-server \
       python3-pip && \
     dnf clean all
